@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+}
+
+.main-header{
+    height: 4rem;
+    padding: 1rem 3rem;
+    align-items: center;
+    display: flex;
+    box-shadow: 1px 2px 2px #00000057;
+}
+
+.main-img{
+    width: 8rem;
+}
+
+.main-header P {
+    font-size: 1.6rem;
+}
+
+.first-section {
+    padding: 3rem;
+  
+}
+
+.first-input-div{
+    display: flex;
+    align-items: center;
+}
+
+.first-input-div > button::before {
+    content: "+";
+    margin-right: 5px;
+}
+
+#Ingredient {
+    font-size: 0.7rem;
+    height: 1rem;
+    width: 13rem;
+    border-radius: 3px;
+    padding: 1.2px 7px;
+    border: 1px solid #00000042;
+    box-shadow: 1px 2px 2px #00000021;
+}
+
+.button {
+    color: white;
+    background: black;
+    margin-left: 0.5rem;
+    border-radius: 3px;
+    border: none;
+    width: 6.5rem;
+    height: 100%;
+    padding: 5px;
+    font-size: 0.55rem;
+}
+
+.ingredients-h1{
+    font-size: 1.3rem;
+    margin: 2rem 4rem 1.5rem 0;
+}
+
+.section-first-ul{
+    padding-left: 1rem;
+}
+
+.section-first-ul li{
+    margin-bottom: 1rem;
+}
+
+.recipe-div {
+    display: flex ;
+        align-items: center;
+        background: #ede7df9c;
+        border-radius: 2px;
+        padding: 0.5rem 1rem;
+        margin-top: 2rem;
+        justify-content: space-between;
+        font-size: 0.65rem;
+        height: 3rem;
+}
+
+.recipe-div ul{
+    padding: 0;
+}
+.bold-p {
+    font-weight: 900;
+    margin-bottom: 4px;
+    font-size: 0.8rem;
+}
+
+.recipe-div button{
+    background: #ca880ae6;
+    border: none;
+    width: 4.3rem;
+    padding-block: 4px;
+    border-radius: 2px;
+    color: #ffffffde;
+    font-size: 0.6rem;
+}
