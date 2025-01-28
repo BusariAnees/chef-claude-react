@@ -3,8 +3,14 @@ import Main from "./components/Main"
 import React from "react"
 
 export default function App() {
-const result = React.useState("Hello")
-  console.log(result)
+let [isImportant, setIsImportant] = React.useState("Hello")
+
+function handleClick () {
+    setIsImportant("Definitely");
+}
+
+
+
 //   function click (){
 //     React.useState("")
 //   }
@@ -16,7 +22,7 @@ const result = React.useState("Hello")
         // </>
         <main> 
             <h1>is state important</h1>
-            <button>{result[0]}</button>
+            <button onClick={handleClick}>{isImportant}</button>
         </main>
     )
 }
