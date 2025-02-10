@@ -1,7 +1,16 @@
+import React from "react"
+
 export default function Main(){
-    const ingredient = ["Chicken", "Oregano", "Tomatoes", ];
-   const news = ingredient.map(ingredient => 
+    const[ingredient , setIngredient] = React.useState([])
+    const news = ingredient.map(ingredient => 
         <li key={ingredient}>{ingredient}</li> )
+
+
+function addIngredientList(){
+    setIngredient(prevSet => [...prevSet, ingredient[prevSet.length] ])
+}
+  
+        
 
 function onsubmit (event){
     event.preventDefault()
@@ -10,6 +19,8 @@ function onsubmit (event){
     const newIngredient = formData.get("ingredient")
     ingredient.push(newIngredient)
     console.log(ingredient);
+
+    addIngredientList();
   
 }
 

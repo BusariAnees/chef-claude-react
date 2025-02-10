@@ -10,6 +10,18 @@ export default function App() {
 // }
 
 
+// const myFavoriteThings = []
+// const [favoriteStuff, setFavorite] = React.useState(myFavoriteThings);
+
+// const allFavoriteThings = ["0", "2", "4", "6", "1", "2"]
+// const thingsElements = favoriteStuff.map(thing => <p key={thing}>{thing}</p>)
+
+
+
+// function addFavoriteThing() {
+//   setFavorite(setprev => [...setprev, allFavoriteThings[setprev.length]])     //updating with array
+// };
+
 
 
 // lesson state setter function
@@ -32,14 +44,16 @@ export default function App() {
 
 
 
-let isGoingout = true;
+// let isGoingout = false;
 
-// const [yess, yesfunc] = React.useState("Yes")
+// const [yess, yesfunc] = React.useState(isGoingout)
 
 // function no () {
-//     isGoingout = false;
-//      yesfunc(prevfunc => prevfunc = "No")
+//   yesfunc(prev => !prev )
+     
 // }
+
+
 
 // function yes() {
 //     isGoingout = true;
@@ -57,18 +71,32 @@ let isGoingout = true;
 // }
 
 
+  
+
 
     return (
-        // <>
-        // <Header/>
-        // <Main/>
-        // </>
+        <>
+        <Header/>
+        <Main/>
+        </>
 
 
-<main>
-    <h1>Do i feel like ging out tonight</h1>
-    <button>{isGoingout ? "yes" : "No"}</button>
-</main>
+// <main>
+//     <button onClick={addFavoriteThing}> Add item</button>
+//     <section aria-live="polite">
+//         {thingsElements}
+//     </section>
+// </main>
+
+
+
+// {/* <main>
+//     <h1>Do i feel like ging out tonight</h1>
+//     <button
+//      onClick={no}
+//      aria-label= {`Current answer is ${yess ? "Yes" : "No"}. Click to change`}
+//      >{yess ? "Yes" : "No"}</button>
+// </main> */}
 
 
 
