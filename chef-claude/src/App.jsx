@@ -1,6 +1,8 @@
 import Header from "./components/Header"
 import Main from "./components/Main"
 import React from "react"
+import starFilled from "/chef.jpg"
+import starEmpty from "/vite.svg"
 
 export default function App() {
 // let [isImportant, setIsImportant] = React.useState("Yes")
@@ -8,6 +10,21 @@ export default function App() {
 // function handleClick () {
 //     setIsImportant("Definitely");
 // }
+
+
+// complex object state
+// const [contact, setContact] = React.useState({
+//     firstName: "John",
+//     lastName: "Anees",
+//     phone: "08121298992",
+//     email: "ayomideanees2003@gmail.com",
+//     isFavourite: false
+// })
+
+
+
+
+
 
 
 // const myFavoriteThings = []
@@ -70,15 +87,98 @@ export default function App() {
 //     answer = "No"
 // }
 
+// let starIcon = contact.isFavourite ? starFilled : starEmpty;
+
+
+// function toggleFavorite(){
+// setContact(prevSet => {
+//     return {
+//         ...contact,
+//         isFavourite : !prevSet.isFavourite,
+//     }
+// })
+    
+// }
+
+function signUp(event){
+    event.preventDefault()
+    console.log("Submitted")
+    const forms = event.currentTarget
+    const formData = new FormData(forms)
+    const email = formData.get("email")
+    console.log(email)
+    const password = formData.get("password")
+    const radio = formData.get("employmentstatus")
+    console.log(radio)
+    // forms.reset()    //react 19 made it possible to slim down the code making it more declarative
+}
 
   
 
 
     return (
-        <>
-        <Header/>
-        <Main/>
-        </>
+        // <>
+        // <Header/>
+        // <Main/>
+        // </>
+
+
+//react form
+
+
+<section>
+    <h1>Signup form</h1>
+    <form onSubmit={signUp} > 
+        <label htmlFor="Email">Email:</label>
+        <input type="text" id="Email" name="email" placeholder="mrman@gmail.com"/>
+        <br />
+
+        <label htmlFor="Password">Password:</label>
+        <input type="password" id="Password" name="password"/>
+
+        <button>Submit</button>
+        <label htmlFor="Desccription"></label>
+        <textarea name="description" id="Description" cols="30" rows="10"></textarea>
+
+
+       <fieldset>
+        <legend>Employment Status </legend>
+       <label >
+            <input type="radio"  name="employmentstatus"  value="employed"/>
+            employed
+        </label>
+        <label >
+            <input type="radio"  name="employmentstatus" value="unemployed"/>
+            unemployed
+        </label>
+        <label >
+            <input type="radio" name="employmentstatus" value="part-time"/>
+            part-time
+        </label>
+       </fieldset>
+     
+    </form>
+</section>
+
+
+
+
+//complex objects 
+// {/* <main>
+//     <article className="card">
+//     <img src="chef.jpg" alt="avatar" />
+//     <div>
+//         <button onClick= {toggleFavorite} aria-pressed={contact.isFavourite} aria-label ={contact.isFavourite ? "Add to Favorite" : "Remove from Favorite"}>
+//             <img src={starIcon} alt={ contact.isFavourite ? "filled star" : "unfilled star"} />
+            
+//         </button>
+//         <h2>{contact.firstName} {contact.lastName}</h2>
+//         <p>{contact.phone}</p>
+//         <p>{contact.email}</p>
+//     </div>
+//     </article>
+// </main> */}
+
 
 
 // <main>
