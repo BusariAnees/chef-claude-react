@@ -12,6 +12,12 @@ export default function App() {
 // }
 
 
+
+
+
+
+
+
 // complex object state
 // const [contact, setContact] = React.useState({
 //     firstName: "John",
@@ -100,65 +106,98 @@ export default function App() {
     
 // }
 
-function signUp(event){
-    event.preventDefault()
-    console.log("Submitted")
-    const forms = event.currentTarget
-    const formData = new FormData(forms)
-    const email = formData.get("email")
-    console.log(email)
-    const password = formData.get("password")
-    const radio = formData.get("employmentstatus")
-    console.log(radio)
-    // forms.reset()    //react 19 made it possible to slim down the code making it more declarative
-}
+// function signUp(event){
+//     event.preventDefault()
+//     console.log("Submitted")
+//     const forms = event.currentTarget
+//     const formData = new FormData(forms)
+//     // const email = formData.get("email")
+//     // console.log(email)
+//     // const password = formData.get("password")
+//     // const radio = formData.get("employmentstatus")
+//     // const checkbox = formData.getAll("diestryRestrictions")
+//     // const color = formData.get("color")
+//     const object = Object.fromEntries(formData)
+//     const dietryData = formData.getAll("diestryRestrictions")
+//     const allData = {
+//         ...object,
+//         dietryData
+//     }
+//     console.log(allData)
+//     // forms.reset()    //react 19 made it possible to slim down the code making it more declarative
+// }
+
 
   
 
 
     return (
-        // <>
-        // <Header/>
-        // <Main/>
-        // </>
+        <>
+        <Header/>
+        <Main/>
+        </>
 
 
 //react form
 
 
-<section>
-    <h1>Signup form</h1>
-    <form onSubmit={signUp} > 
-        <label htmlFor="Email">Email:</label>
-        <input type="text" id="Email" name="email" placeholder="mrman@gmail.com"/>
-        <br />
+// <section>
+//     <h1>Signup form</h1>
+//     <form onSubmit={signUp} > 
+//         <label htmlFor="Email">Email:</label>
+//         <input type="text" id="Email" name="email" placeholder="mrman@gmail.com"/>
+//         <br />
 
-        <label htmlFor="Password">Password:</label>
-        <input type="password" id="Password" name="password"/>
+//         <label htmlFor="Password">Password:</label>
+//         <input type="password" id="Password" name="password"/>
 
-        <button>Submit</button>
-        <label htmlFor="Desccription"></label>
-        <textarea name="description" id="Description" cols="30" rows="10"></textarea>
+//         <button>Submit</button>
+//         <label htmlFor="Desccription"></label>
+//         <textarea name="description" id="Description" cols="30" rows="10"></textarea>
 
 
-       <fieldset>
-        <legend>Employment Status </legend>
-       <label >
-            <input type="radio"  name="employmentstatus"  value="employed"/>
-            employed
-        </label>
-        <label >
-            <input type="radio"  name="employmentstatus" value="unemployed"/>
-            unemployed
-        </label>
-        <label >
-            <input type="radio" name="employmentstatus" value="part-time"/>
-            part-time
-        </label>
-       </fieldset>
+//        <fieldset>
+//         <legend>Employment Status </legend>
+//        <label >
+//             <input type="radio"  name="employmentstatus"  value="employed"/>
+//             employed
+//         </label>
+//         <label >
+//             <input type="radio"  name="employmentstatus" value="unemployed"/>
+//             unemployed
+//         </label>
+//         <label >
+//             <input type="radio" name="employmentstatus" value="part-time" defaultChecked={true}/>
+//             part-time
+//         </label>
+//        </fieldset>
+//        <fieldset>
+//         <legend>Diet Restrictions: </legend>
+//        <label >
+//             <input type="checkbox"  name="diestryRestrictions"  value="kosha"/>
+//             kosha
+//         </label>
+//         <label >
+//             <input type="checkbox"  name="diestryRestrictions" value="vegan"/>
+//             vegan
+//         </label>
+//         <label >
+//             <input type="checkbox" name="diestryRestrictions" value="glutenfree"/>
+//             gluttenfree
+//         </label>
+//        </fieldset>
      
-    </form>
-</section>
+
+//      <label htmlFor="favColor">What is your favorite color?</label>
+//      <select name="color" id="favColor" defaultValue="orange" required>
+//      <option disabled>ChooseValue</option>
+//         <option value="red">Red</option>
+//         <option value="blue">blue</option>
+//         <option value="green">green</option>
+//         <option value="orange">orange</option>
+//      </select>
+//     </form>
+// </section>
 
 
 
