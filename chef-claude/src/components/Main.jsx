@@ -56,7 +56,7 @@ function addRecipe () {
        </div> }
     
    </section>
-   { gotten8 && <section>
+   { gotten && <section>
   <h2>Chef Claude Recommends:</h2>
   <article className="suggested-recipe-container" aria-live="polite">
     <h3>Beef Bolognese Pasta</h3>
