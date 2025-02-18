@@ -1,10 +1,11 @@
 import Header from "./components/Header"
 import Main from "./components/Main"
 import React from "react"
-import starFilled from "/chef.jpg"
-import starEmpty from "/vite.svg"
+import Pads from "./pads"
+// import starFilled from "/chef.jpg"
+// import starEmpty from "/vite.svg"
 
-export default function App() {
+export default function App({darkMode}) {
 // let [isImportant, setIsImportant] = React.useState("Yes")
 
 // function handleClick () {
@@ -128,14 +129,41 @@ export default function App() {
 // }
 
 
-  
+//props and states
+const [pathButton, setButton] = React.useState(Pads)
+const styles = {
+    backgroundColor: darkMode === true ? "black" : "white"                //camel case the css property
+}
+
+
+    const displayB = pathButton.map(e => (<button className={e.on ? "button.on" : ""} style={{backgroundColor: e.color}} key={e.id}> car </button> ))
+
+
+// function click (){
+//     setButton(preB =>  {
+//         return [
+//             ...pathButton,
+//             on= false,
+//         ]
+//     })
+// }
 
 
     return (
-        <>
-        <Header/>
-        <Main/>
-        </>
+        // <>
+        // <Header/>
+        // <Main/>
+        // </>
+
+
+
+
+        <main>
+            <div>
+              {displayB}
+            </div>
+        </main>
+
 
 
 //react form

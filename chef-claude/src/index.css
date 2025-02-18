@@ -98,3 +98,11 @@
     color: #ffffffde;
     font-size: 0.6rem;
 }
+
+
+
+
+.button.on{
+    color: "white" !important;
+    margin: 2rem;
+}
