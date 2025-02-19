@@ -135,8 +135,20 @@ const styles = {
     backgroundColor: darkMode === true ? "black" : "white"                //camel case the css property
 }
 
+const [on, setOn] = React.useState(e.on)
 
-    const displayB = pathButton.map(e => (<button className={e.on ? "button.on" : ""} style={{backgroundColor: e.color}} key={e.id}> car </button> ))
+function clicked () {
+    setOn(prevSet => !prevSet)
+}
+
+function toggle (id){
+   setButton(setPrev => setPrev.map(p => 
+    {  return p.id === id ? { ...p, on: !p.on} : p
+}))
+}
+
+
+    const displayB = pathButton.map(e => (<button  onClicked={clicked} className={e.on ? "button.on" : undefined} style={{backgroundColor: e.color}} key={e.id}> car </button> ))
 
 
 // function click (){
