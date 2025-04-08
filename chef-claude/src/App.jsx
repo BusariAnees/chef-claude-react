@@ -130,25 +130,25 @@ export default function App({darkMode}) {
 
 
 //props and states
-const [pathButton, setButton] = React.useState(Pads)
-const styles = {
-    backgroundColor: darkMode === true ? "black" : "white"                //camel case the css property
-}
+// const [pathButton, setButton] = React.useState(Pads)
+// const styles = {
+//     backgroundColor: darkMode === true ? "black" : "white"                //camel case the css property
+// }
 
-const [on, setOn] = React.useState(e.on)
+// const [on, setOn] = React.useState(e.on)
 
-function clicked () {
-    setOn(prevSet => !prevSet)
-}
+// function clicked () {
+//     setOn(prevSet => !prevSet)
+// }
 
-function toggle (id){
-   setButton(setPrev => setPrev.map(p => 
-    {  return p.id === id ? { ...p, on: !p.on} : p
-}))
-}
+// function toggle (id){
+//    setButton(setPrev => setPrev.map(p => 
+//     {  return p.id === id ? { ...p, on: !p.on} : p
+// }))
+// }
 
 
-    const displayB = pathButton.map(e => (<button  onClicked={clicked} className={e.on ? "button.on" : undefined} style={{backgroundColor: e.color}} key={e.id}> car </button> ))
+//     const displayB = pathButton.map(e => (<button  onClicked={clicked} className={e.on ? "button.on" : undefined} style={{backgroundColor: e.color}} key={e.id}> car </button> ))
 
 
 // function click (){
@@ -162,19 +162,19 @@ function toggle (id){
 
 
     return (
-        // <>
-        // <Header/>
-        // <Main/>
-        // </>
+        <>
+        <Header/>
+        <Main/>
+        </>
 
 
 
 
-        <main>
-            <div>
-              {displayB}
-            </div>
-        </main>
+        // <main>
+        //     <div>
+        //       {displayB}
+        //     </div>
+        // </main>
 
 
 
